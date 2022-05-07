@@ -66,7 +66,7 @@ export default function Home() {
                         minHeight: '800px',
                     }}>
                         <p style={{color: 'white'}}>
-                            <h1>Hello, I'm Apinan Yogaratnam</h1>
+                            <h1>{`Hello, I'm Apinan Yogaratnam`}</h1>
                             A full-stack web developer with a background in mathematics.
 
                         </p>
@@ -85,7 +85,7 @@ export default function Home() {
                         width: '70%',
                         minHeight: '800px',
                     }}>
-                        <h4>Here's my resume</h4>
+                        <h4>{`Here's my resume`}</h4>
                         <a href='www.google.com'>
                             <Button size='lg' variantColor='teal'>
                                 Download Resume
