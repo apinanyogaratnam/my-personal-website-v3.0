@@ -1,31 +1,35 @@
 import {
     List,
     ListItem,
-    ListIcon,
-    OrderedList,
-    UnorderedList,
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import styles from '../../styles/SideBar.module.css';
 
 export default function SideBar() {
+    const [selected, setSelected] = useState('');
+
+    const tabs = [
+        'HOME',
+        'PROFILE',
+        'RESUME',
+        'CONTACT',
+    ];
+
+    const handleSelected = (name) => {
+        setSelected(name);
+    };
+
+    const isSelected = (name) => {
+        return selected === name;
+    };
+
     return (
         <List spacing={3}>
-        <ListItem>
-            <ListIcon as={MdCheckCircle} color='green.500' />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        </ListItem>
-        <ListItem>
-            <ListIcon as={MdCheckCircle} color='green.500' />
-            Assumenda, quia temporibus eveniet a libero incidunt suscipit
-        </ListItem>
-        <ListItem>
-            <ListIcon as={MdCheckCircle} color='green.500' />
-            Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-        </ListItem>
-        {/* You can also use custom icons from react-icons */}
-        <ListItem>
-            <ListIcon as={MdSettings} color='green.500' />
-            Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-        </ListItem>
+            {tabs.map((name, index) => (
+                <ListItem key={index} className={styles['side-bar-list-item']} onClick={() => handleSelected(name)}>
+                    {isSelected(name) ? <b>{name}</b> : <>{name}</>}
+                </ListItem>
+            ))}
         </List>
     )
 }
