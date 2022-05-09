@@ -19,6 +19,8 @@ RUN npm run build
 FROM node:17.9.0-buster as runner
 WORKDIR /usr/src/app
 ENV PORT=3001
+COPY --from=builder /usr/src/app/theme.js ./theme.js
+COPY --from=builder /usr/src/app/.npmrc ./.npmrc
 COPY --from=builder /usr/src/app/next.config.js ./
 COPY --from=builder /usr/src/app/public ./public
 COPY --from=builder /usr/src/app/pages ./pages
