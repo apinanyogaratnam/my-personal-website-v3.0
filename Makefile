@@ -1,2 +1,2 @@
 build:
-	docker buildx build --platform=linux/amd64 -t wemeta-analytics-client .
+	docker buildx build --platform=linux/amd64 -t personal-website .
