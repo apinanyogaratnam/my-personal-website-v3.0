@@ -24,7 +24,7 @@ export default function Homepage() {
                     <h1 className={styles['content-title']}>Apinan Yogaratnam</h1>
                     <h2 className={styles['content-subtitle']}>Software Engineer</h2>
                 </div>
-                <div>image goes here</div>
+                <Image src={require("/public/headshot.jpeg")} alt="headshot" width={300} height={300} />
             </div>
         </div>
     );
