@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/Homepage.module.css';
+import styles from '../styles/Homepage.module.css';
 
 export default function Homepage() {
     const pages = [

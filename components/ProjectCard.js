@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -16,47 +16,45 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     maxWidth: 345,
-//   },
-//   media: {
-//     height: 0,
-//     paddingTop: '56.25%', // 16:9
-//   },
-//   expand: {
-//     transform: 'rotate(0deg)',
-//     marginLeft: 'auto',
-//     transition: theme.transitions.create('transform', {
-//       duration: theme.transitions.duration.shortest,
-//     }),
-//   },
-//   expandOpen: {
-//     transform: 'rotate(180deg)',
-//   },
-//   avatar: {
-//     backgroundColor: red[500],
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+}));
 
 export default function ProjectCard({ project }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!!expanded);
+    setExpanded(!expanded);
   };
 
-  const handleShareIcon = () => {
-    window.open(project.github, '_blank');
-  }
-
+  const title = project.name;
+  console.log(title)
   return (
     <Card className={classes.root}>
-      {/* <CardHeader
+      <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            A
+            R
           </Avatar>
         }
         action={
@@ -64,24 +62,25 @@ export default function ProjectCard({ project }) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={project.name}
-        subheader={project.stack.join(', ')}
+        title="Shrimp and Chorizo Paella"
+        subheader="September 14, 2016"
       />
       <CardMedia
         className={classes.media}
-        image={project.image}
-        title="Paella dish"
+        image="/static/images/cards/paella.jpg"
+        title={title}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {project.description}
+          This impressive paella is a perfect party dish and a fun meal to cook together with your
+          guests. Add 1 cup of frozen peas along with the mussels, if you like.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share" onClick={handleShareIcon}>
+        <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
         <IconButton
@@ -121,7 +120,7 @@ export default function ProjectCard({ project }) {
             Set aside off of the heat to let rest for 10 minutes, and then serve.
           </Typography>
         </CardContent>
-      </Collapse> */}
+      </Collapse>
     </Card>
   );
 }
