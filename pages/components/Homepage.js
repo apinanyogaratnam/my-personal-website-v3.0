@@ -27,7 +27,7 @@ export default function Homepage() {
                     <Image src={require("/public/headshot.jpeg")} alt="headshot" width={300} height={300} />
                     <p className={styles['content-description']}>
                         I am a software engineer based in Toronto.
-                        I am a hybrid of self-taught and fundamentals picked up in highschool with a passion for learning and problem solving.
+                        I am a self-taught full stack software engineer with a passion for learning and problem solving.
                         I am currently a student at the University of Toronto studying Mathematics and Statistics.
                     </p>
                 </div>
