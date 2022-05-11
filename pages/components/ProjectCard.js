@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -16,32 +16,32 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     maxWidth: 345,
+//   },
+//   media: {
+//     height: 0,
+//     paddingTop: '56.25%', // 16:9
+//   },
+//   expand: {
+//     transform: 'rotate(0deg)',
+//     marginLeft: 'auto',
+//     transition: theme.transitions.create('transform', {
+//       duration: theme.transitions.duration.shortest,
+//     }),
+//   },
+//   expandOpen: {
+//     transform: 'rotate(180deg)',
+//   },
+//   avatar: {
+//     backgroundColor: red[500],
+//   },
+// }));
 
-export default function RecipeReviewCard({ project }) {
+export default function ProjectCard({ project }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!!expanded);
@@ -53,7 +53,7 @@ export default function RecipeReviewCard({ project }) {
 
   return (
     <Card className={classes.root}>
-      <CardHeader
+      {/* <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
             A
@@ -81,8 +81,8 @@ export default function RecipeReviewCard({ project }) {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon onClick={handleShareIcon} />
+        <IconButton aria-label="share" onClick={handleShareIcon}>
+          <ShareIcon />
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {
@@ -121,7 +121,7 @@ export default function RecipeReviewCard({ project }) {
             Set aside off of the heat to let rest for 10 minutes, and then serve.
           </Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 }

@@ -1,5 +1,5 @@
 import styles from '../../styles/Projects.module.css';
-import RecipeReviewCard from './Card';
+import ProjectCard from './ProjectCard';
 
 export default function Projects() {
     const projects = [
@@ -35,7 +35,7 @@ export default function Projects() {
                     <div className={styles['projects-container']}>
                         {projects.map((project, index) => (
                             <div key={index} className={styles['project-container']}>
-                                <RecipeReviewCard project={project}/>
+                                <ProjectCard project={project}/>
                             </div>
                         ))}
                     </div>
