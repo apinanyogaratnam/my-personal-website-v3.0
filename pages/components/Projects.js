@@ -1,25 +1,9 @@
 import Image from 'next/image';
-import styles from '../../styles/Homepage.module.css';
+import styles from '../../styles/Projects.module.css';
 
-export default function Homepage() {
-    const pages = [
-        'Home',
-        'Projects',
-        'About',
-        'Contact',
-    ]
-
+export default function Projects() {
     return (
-        <div id="home">
-            <div className={styles['header-container']}>
-                <div className={styles['header-content']}>
-                    {
-                        pages.map((page, index) => (
-                            <a key={index} className={styles['page-selector']} href={`#${page.toLowerCase()}`}>{page}</a>
-                        ))
-                    }
-                </div>
-            </div>
+        <div id="projects">
             <div className={styles['content-container']}>
                 <div className={styles['content-content']}>
                     <h1 className={styles['content-title']}>Apinan Yogaratnam</h1>
