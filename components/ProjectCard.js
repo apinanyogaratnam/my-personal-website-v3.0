@@ -44,17 +44,19 @@ export default function ProjectCard({ project }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
+    setExpanded(!!expanded);
   };
 
-  const title = project.name;
-  console.log(title)
+  const handleShareClick = () => {
+    window.open(project.github, '_blank');
+  };
+
   return (
     <Card className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            A
           </Avatar>
         }
         action={
@@ -62,25 +64,23 @@ export default function ProjectCard({ project }) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={project.name}
+        subheader={project.stack.join(', ')}
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title={title}
+        image={project.image}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          {project.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label="share" onClick={handleShareClick}>
           <ShareIcon />
         </IconButton>
         <IconButton
