@@ -5,6 +5,7 @@ COPY package.json ./
 COPY .npmrc ./.npmrc
 COPY .env.production ./.env.production
 
+RUN npm i @chakra-ui/react --legacy-peer-deps
 RUN npm i
 
 FROM node:17.9.0-buster as builder
