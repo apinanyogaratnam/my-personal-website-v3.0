@@ -11,9 +11,11 @@ auth:
 
 tag:
 	docker tag personal-website ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
+	git tag -m "${VERSION}" ${VERSION}
 
 push:
 	docker push ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
+	git push origin ${VERSION}
 
 all:
 	make build && make auth && make tag && make push
