@@ -1,4 +1,4 @@
-VERSION := 0.0.5
+VERSION := 0.0.6
 
 build:
 	docker buildx build --platform=linux/amd64 -t personal-website .
@@ -11,7 +11,7 @@ auth:
 
 tag:
 	docker tag personal-website ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
-	git tag -m "${VERSION}" ${VERSION}
+	git tag -m "v${VERSION}" v${VERSION}
 
 push:
 	docker push ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
