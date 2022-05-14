@@ -1,6 +1,8 @@
+import styles from '../styles/Contact.module.css';
+
 export default function Contact() {
     return (
-        <div id="contact">
+        <div id="contact" className={styles['content-container']}>
             <div>
                 <h1>Contact</h1>
                 <h2>Feel free to contact me</h2>
