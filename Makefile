@@ -1,4 +1,4 @@
-VERSION := 0.0.7
+VERSION := 0.0.8
 
 build:
 	docker buildx build --platform=linux/amd64 -t personal-website .
