@@ -1,4 +1,5 @@
 import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai';
+import { BsStackOverflow } from 'react-icons/bs';
 import styles from '../styles/Contact.module.css';
 
 export default function Contact() {
@@ -19,6 +20,9 @@ export default function Contact() {
                     </a>
                     <a href="https://twitter.com/apiyogaratnam">
                         <AiFillTwitterCircle />
+                    </a>
+                    <a href="https://stackoverflow.com/users/13776723/apinanyogaratnam">
+                        <BsStackOverflow />
                     </a>
                 </div>
             </div>
