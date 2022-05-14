@@ -1,3 +1,4 @@
+import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai';
 import styles from '../styles/Contact.module.css';
 
 export default function Contact() {
@@ -8,10 +9,16 @@ export default function Contact() {
                 <h2>Feel free to contact me</h2>
                 <div>
                     <a href="mailto:apinanapinan@icloud.com">
-                        <img src="/mail.png" alt="mail" />
+                        <AiFillMail />
                     </a>
-                    <a href="https://www.linkedin.com/in/apinan-yogaratnam">
-                        <img src="/linkedin.png" alt="linkedin" />
+                    <a href="https://linkedin.com/in/apinanyogaratnam">
+                        <AiFillLinkedin />
+                    </a>
+                    <a href="https://github.com/apinanyogaratnam">
+                        <AiFillGithub />
+                    </a>
+                    <a href="https://twitter.com/apiyogaratnam">
+                        <AiFillTwitterCircle />
                     </a>
                 </div>
             </div>
