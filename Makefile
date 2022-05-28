@@ -1,4 +1,4 @@
-VERSION := 0.0.10
+VERSION := 0.0.11
 
 start:
 	npm run dev
@@ -14,10 +14,12 @@ auth:
 
 tag:
 	docker tag personal-website ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
+	docker tag personal-website ghcr.io/apinanyogaratnam/my-personal-website-v3.0:latest
 	git tag -m "v${VERSION}" v${VERSION}
 
 push:
 	docker push ghcr.io/apinanyogaratnam/my-personal-website-v3.0:${VERSION}
+	docker push ghcr.io/apinanyogaratnam/my-personal-website-v3.0:latest
 	git push --tags
 
 all:
