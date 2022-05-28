@@ -11,18 +11,18 @@ export default function Projects() {
             stack: ['Python', 'Repl.it'],
         },
         {
-            name: 'Stews Bot',
-            description: 'A discord bot that leverages Tensorflow and GPT-3 to answer questions',
+            name: 'Landpeer',
+            description: 'A chrome extension that allows you to record in the metaverse',
             image: 'https://i.imgur.com/qXqZqZq.png',
-            github: 'https://github.com/apinanyogaratnam/stews-bot',
-            stack: ['Python', 'Repl.it'],
+            github: 'https://github.com/apinanyogaratnam/landpeer',
+            stack: ['React', 'HTML', 'CSS', 'JavaScript'],
         },
         {
-            name: 'Stews Bot',
-            description: 'A discord bot that leverages Tensorflow and GPT-3 to answer questions',
+            name: 'Journal my Life',
+            description: 'A full-stack web application to write daily journals and view public journals',
             image: 'https://i.imgur.com/qXqZqZq.png',
-            github: 'https://github.com/apinanyogaratnam/stews-bot',
-            stack: ['Python', 'Repl.it'],
+            github: 'https://github.com/apinanyogaratnam/journal-my-life',
+            stack: ['Python', 'Flask', 'React', 'HTML', 'CSS', 'JavaScript', 'Heroku'],
         }
     ]
 
