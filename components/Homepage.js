@@ -26,9 +26,9 @@ export default function Homepage() {
                     <h2 className={styles['content-subtitle']}>Software Engineer</h2>
                     <Image src={require("/public/headshot.jpeg")} alt="headshot" width={300} height={300} />
                     <p className={styles['content-description']}>
-                        I am a self-taught full stack software engineer based in Toronto with a passion for learning and 
+                        I am a self-taught full stack software engineer based in Toronto with a passion for learning and
 problem solving.
-                        I am currently a student at the University of Toronto studying Mathematics, Statistics and 
+                        I am currently a student at the University of Toronto studying Mathematics, Statistics and
 Psychology.
                     </p>
                 </div>
