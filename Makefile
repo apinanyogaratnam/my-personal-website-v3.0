@@ -1,5 +1,8 @@
 VERSION := 0.0.10
 
+start:
+	npm run dev
+
 build:
 	docker buildx build --platform=linux/amd64 -t personal-website .
 
